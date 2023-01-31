@@ -108,7 +108,6 @@ export class PuppeteerCoreModule
         return await browser.createIncognitoBrowserContext();
       },
       inject: [
-        PUPPETEER_MODULE_OPTIONS,
         getBrowserToken(puppeteerInstanceName),
       ],
     };
@@ -119,7 +118,6 @@ export class PuppeteerCoreModule
         return await context.newPage();
       },
       inject: [
-        PUPPETEER_MODULE_OPTIONS,
         getContextToken(puppeteerInstanceName),
       ],
     };
